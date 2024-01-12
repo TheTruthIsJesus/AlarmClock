@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alarm.css">
+    <title>Alarm Clock</title>
+</head>
+<body>
+
+    <audio id="alarmTone">
+        <source src="korea.wav" type="audio/wav">
+    </audio>
+
+    <div id="announcement">
+        <h2 class="riseBehind1">This</h2>
+        <h2 class="riseBehind2">is my</h2>
+        <h2 class="riseBehind3">Alarm Clock!</h2>
+        <h4 class="riseBehind4">Jesus Is The Truth</h2>
+    </div>
+
+    <div id="shadow"></div>
+    <div id="shadow2"></div>
+
+    <div id="wrapper">
+ 
+        
+
+        <div id="btns">
+            <button id="setBtn" class="skewBtn btnPushed btnFormat">SET</button>
+            <button id="hammer" class="skewBtn btnPushed btnFormat">🔨</button>
+            <button id="snooze" class="skewBtn btnPushed btnFormat">💤</button>
+        </div> 
+        
+        <div id="leftClock1"></div>
+        <!-- <div id="leftClock2"></div> -->
+        
+        <div id="display">
+            <h1 id="current-time"></h1>
+            <br>
+
+            <div id="inputWrap">
+                <input type="time" name="alarmTime" id="alarmTime" value="00:00"><br>
+                <label for="alarmTime" class="underOverlineFade"> ↗ Set Alarm ↖</label>
+            </div>
+
+        </div>
+            
+        
+        <p id="countdown"></p>
+
+    </div>
+
+    <script>
+/*
+==============================================
+                 VARIABLES
+==============================================
+*/
+    const time = document.getElementById("current-time")
+    const timeInput = document.getElementById("alarmTime")
+    const setBtn = document.getElementById("setBtn")
+    const p = document.getElementById("countdown")
+    const alarmTone = document.getElementById("alarmTone")
+    const shutUpBtn = document.getElementById("hammer")
+    const snoozeBtn = document.getElementById("snooze")
+
+    /*
+==============================================
+                 DISPLAY TIME
+==============================================
+*/
+
+    setInterval(() =>{
+    let date = new Date()
+    time.innerHTML = date.toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit"})
+    }, 1000)
+
+    /*
+==============================================
+                 FUNCTIONALITY
+==============================================
+*/
+
+    function alarmCheck() 
+    {
+        let date = new Date()
+        time.innerHTML = date.toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit"})
+        
+        console.log("click")
+        p.innerHTML = `Alarm will ring at ${timeInput.value}`
+
+        setTimeout(() => {p.innerHTML = ""}, 5000)
+
+        let compareTime = setInterval(() => {
+        if (timeInput.value === time.innerHTML )
+            {
+                console.log("DING DING DING")
+                
+                alarmTone.play()
+                
+                clearInterval(compareTime)
+            }}, 1000
+        )
+    }   
+
+
+    setBtn.addEventListener("click", alarmCheck)
+
+    shutUpBtn.addEventListener("click", () => {
+        alarmTone.pause()
+        alarmTone.load()
+    })
+
+    snoozeBtn.addEventListener("click", () => {
+
+        
+        let date = new Date()
+    let timeNow = date.toLocaleTimeString(
+        
+        "en-GB", {hour:"2-digit", minute:"2-digit"}
+        )
+        
+    let splitIntoArr = timeNow.split(":")
+
+    let minutesToIntAddFive = (parseInt(splitIntoArr[1])) + 5
+
+    if (minutesToIntAddFive < 10){
+        minutesToIntAddFive = "0"+minutesToIntAddFive
+    } 
+
+
+    splitIntoArr.splice(1, 1, minutesToIntAddFive)
+    
+    
+
+    let snoozeTimer = splitIntoArr.join(":")
+
+
+
+    console.log("click")
+        p.innerHTML = `Alarm will ring at ${snoozeTimer}`
+
+        setTimeout(() => {p.innerHTML = ""}, 5000)
+
+        let compareTime = setInterval(() => {
+        if (snoozeTimer === time.innerHTML )
+            {
+                console.log("DING DING DING")
+                
+                alarmTone.play()
+                
+                clearInterval(compareTime)
+            }}, 1000)
+    
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+*,*::after,*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --clr1: aqua;
+    --clr2: hsl(231, 39%, 47%);
+    --clr3: hsl(300, 50%, 70%);
+    --clr4: hsl(278, 56%, 19%);
+}
+
+
+html
+{
+    background-image: -moz-linear-gradient(to bottom, var(--clr2), var(--clr4));
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    /* border: 2px solid yellow; */
+    text-align: center;
+}
+
+body
+{   
+    margin-top:20em;
+    border: 2px solid transparent;
+    position: absolute;
+    color: white;
+    right:20%;
+    
+    
+}
+
+@font-face 
+{
+    font-family: "Digital";
+    src: url("DS-Digi.ttf");
+}
+
+#shadow
+{
+    position: absolute;
+    background-image: -moz-linear-gradient(to bottom, rgb(53, 10, 70), rgba(61, 27, 70, 0.151)80%);
+    height: 3em;
+    width: 11.5em;
+    left:-90px;
+    top: 5.8rem;
+    transform: skew(105deg);
+    z-index: -1;
+}
+
+#shadow2
+{
+    position: absolute;
+    background-image: -moz-linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.774)96%);
+    height: 2em;
+    width: 12.5em;
+    left:-18px;
+    top: 8.4rem;
+    transform: skew(110deg);
+    z-index: -1;
+    box-shadow: -170px -8px 30px hsl(283, 59%, 16%), 0px 8px 30px hsl(283, 59%, 16%);
+}
+
+#announcement {
+    position: absolute;
+    z-index: -10;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr3);
+    text-shadow: 3px -3px 2px var(--clr1);
+    top:2em;
+    left:2.5em;
+    
+}
+
+.riseBehind1{
+    display: block;
+    position: absolute;
+    animation-name: riseBehind;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+}
+
+.riseBehind2{
+    display: block;
+    position: absolute;
+    animation-name: riseBehind;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+
+.riseBehind3{
+    display: block;
+    position: absolute;
+    animation-name: riseBehind;
+    animation-duration: 3.5s;
+    animation-delay: 7.5s;
+}
+
+.riseBehind4{
+    display: block;
+    position: absolute;
+    animation-name: riseBehind;
+    animation-duration: 10s;
+    animation-delay: 10s;
+}
+
+#countdown{
+    font-family: system-ui;
+    font-weight: 200;
+    color: var(--clr3);
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    50% {opacity:1;}
+    100% {opacity:0;}
+}
+
+#wrapper
+{
+    border: 8px solid transparent;
+    min-width:8rem;
+    max-width:14rem;
+    place-self: center;
+    z-index: -2;
+    
+}
+
+#btns
+{
+    border: 2px solid rgba(21, 21, 56, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding:.5rem 1rem;
+    gap: 5px;
+    background-image: -moz-linear-gradient(to bottom left, hsl(180, 50%, 60%), hsl(200, 50%, 40%));
+    transform: skew(30deg);
+    border-radius: 5px;
+    
+}
+
+#leftClock1
+{
+    position: absolute;
+    border: 2px solid rgba(21, 21, 56, 0);
+    width: 40px;
+    z-index: 2;
+    height: 83px;
+    top:10px;
+    left:-3px;
+    border-radius: 5px;
+    border-bottom: none;
+    background-image: -moz-linear-gradient(to top right, hsl(200, 50%, 40%),hsl(230, 50%, 20%)70%);
+    z-index: -1;
+}
+
+/* #leftClock2
+{
+    position: absolute;
+    border: 2px solid rgba(21, 21, 56, 0);
+    width: 40px;
+    z-index: 2;
+    height: 33px;
+    top:76px;
+    left:8px;
+    transform:rotate(-15deg);
+    border-radius:6px;
+    border-top-left-radius: 0;
+    border-top: none;
+    background-image: -moz-linear-gradient(to right, hsl(200, 50%, 40%),hsl(230, 50%, 20%));
+    z-index: -1;
+} */
+
+#display
+{
+    border: 2px solid rgba(21, 21, 56, 0.452);
+    padding: 5px 7px;
+    margin-left: 9px;
+    min-width: 13.2rem;
+    text-align: center;
+    background-image: -moz-linear-gradient(to top right, hsl(200, 50%, 35%), hsl(220, 50%, 40%));
+    border-radius: 5px;
+    border-top:none;
+    border-left: 2px solid rgb(25, 49, 94);
+    
+}
+
+#snooze
+{
+    flex-grow: 1;
+    min-width: 7rem;
+}
+
+h1
+{   
+    border-bottom: 2px solid rgba(127, 255, 255, 0.637);
+    border-right: 2px solid rgba(127, 255, 255, 0.637);
+    display: inline;
+    font-family: "Digital";
+    color: var(--clr1);
+    background-color: rgb(8, 8, 65);
+
+}
+
+label
+{
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: rgb(8, 8, 83);
+    
+}
+
+.skewBtn
+{
+    transform: skew(5deg);
+    border-left: 3px solid rgb(48, 78, 105);
+    border-bottom: 3px solid rgb(48, 78, 105);
+    border-radius: 5px;
+    z-index: 6;
+}
+
+.btnPushed:active
+{
+    border-right: 5px solid midnightblue;
+    border-top: 5px solid midnightblue;
+    border-left: none;
+    border-bottom: none;
+    
+}
+
+#alarmTime{
+    margin-top:4px;
+    border-radius: 20px;
+    background-color: rgb(182, 255, 249);
+    color:mediumblue;
+    font-weight: 500;
+    font-family: digital;
+    border-top:none;
+    border-left: none;
+    border-bottom: 1px solid rgba(3, 27, 27, 0.808);
+    border-right: 1px solid rgba(4, 27, 27, 0.808);
+}
+
+.btnFormat
+{
+    padding:2px 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    border-radius: 17px;
+    border-right: 2px solid lightblue;
+    background-image: -moz-radial-gradient(var(--clr3), var(--clr1));
+    color: midnightblue;
+}
+
+.btnFormat:hover
+{
+    cursor: pointer;
+}
+
+#alarmTime:active{
+    background-color: white;
+}
+
+#alarmTime:hover{
+    cursor:text;
+}
+
+.underOverlineFade{
+    animation: underOverlineFade 3s infinite;
+}
+
+@keyframes underOverlineFade {
+    0% {color: var(--clr3);}
+    50% {color: rgb(8, 8, 83);}
+    100% {color: var(--clr3);}
+}
+
+@keyframes riseBehind {
+    0% {transform: translatey(0);
+    opacity: 1;}
+    50% {transform: translatey(-100px);
+    opacity: 1;}
+    100% {transform: translatey(0);
+    opacity: 0;}
+}
+
+
+@media screen and (min-width: 500px) {
+    body{margin-top: 8em;
+    right: 30svw;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body{margin-top: 8em;
+    right: 40svw;
+    }
+}
+
