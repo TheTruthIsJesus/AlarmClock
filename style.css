@@ -30,7 +30,7 @@ body
     border: 2px solid transparent;
     position: absolute;
     color: white;
-    right:20%;
+    right:10%;
     
     
 }
@@ -59,7 +59,7 @@ body
     background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.774)96%);
     height: 2em;
     width: 12.5em;
-    left:-18px;
+    left:-15px;
     top: 8.4rem;
     transform: skew(110deg);
     z-index: -1;
@@ -259,6 +259,7 @@ label
     font-weight: 600;
     border-radius: 17px;
     border-right: 2px solid lightblue;
+    border-top: 2px solid white;
     background-image: radial-gradient(var(--clr3), var(--clr1));
     color: midnightblue;
 }
@@ -289,7 +290,7 @@ label
 @keyframes riseBehind {
     0% {transform: translatey(0);
     opacity: 1;}
-    50% {transform: translatey(-100px);
+    50% {transform: translatey(-110px);
     opacity: 1;}
     100% {transform: translatey(0);
     opacity: 0;}
