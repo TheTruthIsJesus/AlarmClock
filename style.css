@@ -16,7 +16,7 @@
 
 html
 {
-    background-image: -moz-linear-gradient(to bottom, var(--clr2), var(--clr4));
+    background-image: linear-gradient(to bottom, var(--clr2), var(--clr4));
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -44,7 +44,7 @@ body
 #shadow
 {
     position: absolute;
-    background-image: -moz-linear-gradient(to bottom, rgb(53, 10, 70), rgba(61, 27, 70, 0.151)80%);
+    background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(61, 27, 70, 0.151)80%);
     height: 3em;
     width: 11.5em;
     left:-90px;
@@ -56,7 +56,7 @@ body
 #shadow2
 {
     position: absolute;
-    background-image: -moz-linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.774)96%);
+    background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.774)96%);
     height: 2em;
     width: 12.5em;
     left:-18px;
@@ -142,7 +142,7 @@ body
     justify-content: space-around;
     padding:.5rem 1rem;
     gap: 5px;
-    background-image: -moz-linear-gradient(to bottom left, hsl(180, 50%, 60%), hsl(200, 50%, 40%));
+    background-image: linear-gradient(to bottom left, hsl(180, 50%, 60%), hsl(200, 50%, 40%));
     transform: skew(30deg);
     border-radius: 5px;
     
@@ -159,7 +159,7 @@ body
     left:-3px;
     border-radius: 5px;
     border-bottom: none;
-    background-image: -moz-linear-gradient(to top right, hsl(200, 50%, 40%),hsl(230, 50%, 20%)70%);
+    background-image: linear-gradient(to top right, hsl(200, 50%, 40%),hsl(230, 50%, 20%)70%);
     z-index: -1;
 }
 
@@ -176,7 +176,7 @@ body
     border-radius:6px;
     border-top-left-radius: 0;
     border-top: none;
-    background-image: -moz-linear-gradient(to right, hsl(200, 50%, 40%),hsl(230, 50%, 20%));
+    background-image: linear-gradient(to right, hsl(200, 50%, 40%),hsl(230, 50%, 20%));
     z-index: -1;
 } */
 
@@ -187,7 +187,7 @@ body
     margin-left: 9px;
     min-width: 13.2rem;
     text-align: center;
-    background-image: -moz-linear-gradient(to top right, hsl(200, 50%, 35%), hsl(220, 50%, 40%));
+    background-image: linear-gradient(to top right, hsl(200, 50%, 35%), hsl(220, 50%, 40%));
     border-radius: 5px;
     border-top:none;
     border-left: 2px solid rgb(25, 49, 94);
@@ -259,7 +259,7 @@ label
     font-weight: 600;
     border-radius: 17px;
     border-right: 2px solid lightblue;
-    background-image: -moz-radial-gradient(var(--clr3), var(--clr1));
+    background-image: radial-gradient(var(--clr3), var(--clr1));
     color: midnightblue;
 }
 
