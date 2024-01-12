@@ -56,11 +56,11 @@ body
 #shadow2
 {
     position: absolute;
-    background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.774)96%);
+    background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.6)96%);
     height: 2em;
     width: 12.5em;
     left:-15px;
-    top: 10rem;
+    top: 8rem;
     transform: skew(110deg);
     z-index: -1;
     box-shadow: -170px -8px 30px hsl(283, 59%, 16%), 0px 8px 30px hsl(283, 59%, 16%);
