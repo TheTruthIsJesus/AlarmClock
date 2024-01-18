@@ -59,7 +59,7 @@ body
     background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(51, 28, 66, 0.75)96%);
     height: 2em;
     width: 12.5em;
-    left:-19px;
+    left:-15px;
     top: 8.5rem;
     transform: skew(110deg);
     z-index: -1;
