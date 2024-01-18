@@ -44,7 +44,7 @@ body
 #shadow
 {
     position: absolute;
-    background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(61, 27, 70, 0.3)80%);
+    background-image: linear-gradient(to bottom, rgb(53, 10, 70), rgba(61, 27, 70, 0.23)80%);
     height: 3em;
     width: 11.5em;
     left:-90px;
