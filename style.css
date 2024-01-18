@@ -63,7 +63,7 @@ body
     top: 8.5rem;
     transform: skew(110deg);
     z-index: -1;
-    box-shadow: -150px -8px 30px hsl(283, 59%, 20%), 0px 8px 30px hsl(283, 59%, 20%);
+    box-shadow: -190px -8px 30px hsl(283, 59%, 15%), 0px 8px 30px hsl(283, 59%, 15%);
 }
 
 #announcement {
