@@ -60,7 +60,7 @@ body
     height: 2em;
     width: 12.5em;
     left:-15px;
-    top: 8.5rem;
+    top: 9rem;
     transform: skew(110deg);
     z-index: -1;
     box-shadow: -185px -8px 30px hsl(283, 59%, 15%), 0px 10px 30px hsl(283, 59%, 15%);
